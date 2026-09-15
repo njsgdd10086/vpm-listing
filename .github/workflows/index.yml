@@ -17,6 +17,11 @@ on:
 permissions:
   contents: write
 
+# 定时任务和手动触发可能撞在一起，串行执行免得两边同时强推 gh-pages
+concurrency:
+  group: vpm-index
+  cancel-in-progress: false
+
 env:
   # 索引里要列出的所有包所在仓库
   PACKAGE_REPOS: 'njsgdd10086/LilToNonToonSwitcher njsgdd10086/NonToonLightLimit'
