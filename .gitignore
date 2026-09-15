@@ -1,0 +1,18 @@
+# Unity / 通用忽略项
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# 构建产物（索引由 Actions 生成并推到 gh-pages，不提交到 main）
+pages/
+index.json
+vpm.json
+releases-*.json
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
