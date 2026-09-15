@@ -42,6 +42,13 @@ ASSET_PATTERN = re.compile(r"^(?P<name>.+)-(?P<version>\d+\.\d+\.\d+(?:[-+][0-9A
 REPO_PATTERN = re.compile(r"repos/(?P<slug>[^/]+/[^/]+)/releases")
 
 
+def version_key(version: str) -> tuple:
+    """把 x.y.z 变成可比较的数字元组，正式版排在预发布版前面。"""
+    main, _, suffix = version.partition("-")
+    numbers = tuple(int(part) for part in main.split(".") if part.isdigit())
+    return numbers, suffix == ""
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--releases", required=True, nargs="+",
@@ -81,12 +88,16 @@ def main() -> int:
                     "author": {"name": AUTHOR_NAME, "url": f"https://github.com/{login}"},
                 }
 
+    # 版本从新到旧排，VCC / ALCOM 里看起来更顺
+    ordered = {name: {"versions": dict(sorted(pkg["versions"].items(), key=lambda kv: version_key(kv[0]), reverse=True))}
+               for name, pkg in sorted(packages.items())}
+
     vpm = {
         "name": REPO_NAME,
         "id": f"com.{login}.vpm-repo",
         "url": f"https://{login}.github.io/{repo_name}/index.json",
         "author": {"name": AUTHOR_NAME, "url": f"https://github.com/{login}"},
-        "packages": packages,
+        "packages": ordered,
     }
 
     text = json.dumps(vpm, ensure_ascii=False, indent=2) + "\n"
@@ -96,10 +107,10 @@ def main() -> int:
     (output / "index.json").write_text(text, encoding="utf-8")
     (output / "vpm.json").write_text(text, encoding="utf-8")
 
-    total = sum(len(pkg["versions"]) for pkg in packages.values())
-    print(f"已生成索引：包 {len(packages)} 个，版本 {total} 个")
-    for pkg_name, pkg in packages.items():
-        print(f"  {pkg_name}: {', '.join(sorted(pkg['versions']))}")
+    total = sum(len(pkg["versions"]) for pkg in ordered.values())
+    print(f"已生成索引：包 {len(ordered)} 个，版本 {total} 个")
+    for pkg_name, pkg in ordered.items():
+        print(f"  {pkg_name}: {', '.join(pkg['versions'])}")
     return 0
 
 
