@@ -21,21 +21,6 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 装哪个插件由你决定，索引里不会有任何东西被强制安装。
 
-## 索引是怎么来的
-
-`index.json` 不是手写的，而是由本仓库的 GitHub Actions 自动生成：
-
-* 抓取 `PACKAGE_REPOS` 里各插件仓库的 Release 资产（`<包名>-<版本>.zip`）；
-* 合并成一份索引，每个版本的下载地址直接指向对应仓库的 Release；
-* 推送到本仓库的 `gh-pages` 分支。
-
-触发时机：本仓库有提交、每天定时一次、也可以在 Actions 页面手动运行。
-插件仓库发新版本时，其 Release 会自动带上新版本，索引在定时任务里跟进
-（想立刻刷新就手动跑一次 `重建 VPM 索引`）。
-
-要新增插件，只要把它的仓库加进 `.github/workflows/index.yml` 的 `PACKAGE_REPOS`
-和 `scripts/make_vpm_repo.py` 的 `PACKAGE_INFO` 即可。
-
 ## 许可
 
-本仓库只是索引与构建脚本，MIT。
+MIT。
