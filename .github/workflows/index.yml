@@ -68,6 +68,23 @@ jobs:
           echo "=== index.json ==="
           cat pages/index.json
 
+      - name: 自检索引内容
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib
+          data = json.loads(pathlib.Path("pages/index.json").read_text(encoding="utf-8"))
+          packages = data.get("packages") or {}
+          assert packages, "索引里一个包都没有"
+          for name, pkg in packages.items():
+              versions = pkg.get("versions") or {}
+              assert versions, f"{name} 没有任何版本"
+              for version, entry in versions.items():
+                  assert entry.get("url"), f"{name} {version} 没有下载地址"
+          print("索引自检通过：", {n: list(p["versions"]) for n, p in packages.items()})
+          PY
+
       - name: 推送到 gh-pages
         shell: bash
         run: |
