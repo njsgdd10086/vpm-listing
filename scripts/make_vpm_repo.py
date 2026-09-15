@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import pathlib
 import re
@@ -47,6 +48,70 @@ def version_key(version: str) -> tuple:
     main, _, suffix = version.partition("-")
     numbers = tuple(int(part) for part in main.split(".") if part.isdigit())
     return numbers, suffix == ""
+
+
+def build_page(vpm: dict) -> str:
+    """生成给人看的页面：用浏览器打开索引地址时不再是看不懂的 JSON。"""
+    cards = []
+    for pkg_name, pkg in vpm["packages"].items():
+        versions = list(pkg["versions"].values())
+        latest = versions[0]
+        items = "".join(
+            f'<li><a href="{html.escape(v["url"])}">{html.escape(v["version"])}</a></li>'
+            for v in versions
+        )
+        cards.append(
+            f'    <section class="card">\n'
+            f'      <h2>{html.escape(latest["displayName"])}</h2>\n'
+            f'      <p class="meta">{html.escape(pkg_name)} · 最新 {html.escape(latest["version"])}'
+            f' · Unity {html.escape(latest["unity"])}</p>\n'
+            f'      <p class="desc">{html.escape(latest["description"])}</p>\n'
+            f'      <ul class="versions">{items}</ul>\n'
+            f'      <p class="meta">源码仓库：<a href="{html.escape(latest["repo"])}">'
+            f'{html.escape(latest["repo"])}</a></p>\n'
+            f'    </section>'
+        )
+    total = sum(len(pkg["versions"]) for pkg in vpm["packages"].values())
+    index_url = vpm["url"]
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html.escape(vpm["name"])}</title>
+<style>
+  :root {{ color-scheme: light dark; }}
+  body {{ margin: 0 auto; max-width: 46rem; padding: 2.5rem 1.25rem;
+         font: 16px/1.7 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }}
+  h1 {{ font-size: 1.5rem; margin: 0 0 .25rem; }}
+  .meta {{ color: #6a737d; font-size: .85rem; margin: .2rem 0; }}
+  .desc {{ margin: .6rem 0; }}
+  .card {{ border: 1px solid #d0d7de; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }}
+  .versions {{ margin: .4rem 0 .6rem; padding-left: 1.2rem; columns: 4; }}
+  code, pre {{ font-family: ui-monospace, Consolas, monospace; font-size: .85rem; }}
+  pre {{ background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: .7rem .85rem; overflow-x: auto; }}
+  @media (prefers-color-scheme: dark) {{
+    .card, pre {{ border-color: #30363d; }}
+    pre {{ background: #161b22; }}
+    .meta {{ color: #8b949e; }}
+  }}
+</style>
+</head>
+<body>
+  <h1>{html.escape(vpm["name"])}</h1>
+  <p class="meta">{len(vpm["packages"])} 个包 · {total} 个版本 · 作者
+    <a href="{html.escape(vpm["author"]["url"])}">{html.escape(vpm["author"]["name"])}</a></p>
+
+  <p>在 VCC / ALCOM 里「Add Repository」填下面这个地址，就能看到并安装这里的插件：</p>
+  <pre>{html.escape(index_url)}</pre>
+
+{chr(10).join(cards)}
+
+  <p class="meta">本页与 <a href="index.json">index.json</a> 由 GitHub Actions 每次跟进插件仓库的
+    Release 后自动重新生成。</p>
+</body>
+</html>
+"""
 
 
 def main() -> int:
@@ -106,6 +171,8 @@ def main() -> int:
     # VCC / ALCOM 读 index.json；vpm.json 作为兼容别名一并保留
     (output / "index.json").write_text(text, encoding="utf-8")
     (output / "vpm.json").write_text(text, encoding="utf-8")
+    # 浏览器直接打开索引地址时给一个人看的页面
+    (output / "index.html").write_text(build_page(vpm), encoding="utf-8")
 
     total = sum(len(pkg["versions"]) for pkg in ordered.values())
     print(f"已生成索引：包 {len(ordered)} 个，版本 {total} 个")
