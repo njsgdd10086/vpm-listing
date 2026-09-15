@@ -9,9 +9,9 @@ on:
       - 'scripts/make_vpm_repo.py'
       - '.github/workflows/index.yml'
   schedule:
-    # 每 30 分钟跟一次插件仓库的新版本（发版后最迟半小时出现在索引里；
+    # 每 15 分钟跟一次插件仓库的新版本（发版后最迟一刻钟出现在索引里；
     # 想立刻刷新就在 Actions 页面手动跑一次本工作流）
-    - cron: '*/30 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
