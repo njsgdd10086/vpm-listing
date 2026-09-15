@@ -83,6 +83,15 @@ jobs:
               for version, entry in versions.items():
                   assert entry.get("url"), f"{name} {version} 没有下载地址"
           print("索引自检通过：", {n: list(p["versions"]) for n, p in packages.items()})
+
+          page = pathlib.Path("pages/index.html").read_text(encoding="utf-8")
+          assert page.lstrip().startswith("<!DOCTYPE html>"), "index.html 不是完整的网页"
+          for name, pkg in packages.items():
+              assert name in page, f"index.html 里没有列出 {name}"
+              for version in pkg["versions"]:
+                  assert version in page, f"index.html 里没有列出 {name} {version}"
+          assert "index.json" in page, "index.html 里没有指向 index.json 的说明"
+          print("页面自检通过：", len(page), "字节")
           PY
 
       - name: 推送到 gh-pages
