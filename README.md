@@ -21,6 +21,17 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 装哪个插件由你决定，索引里不会有任何东西被强制安装。
 
+## 浏览器里看
+
+用浏览器打开仓库根地址（<https://njsgdd10086.github.io/vpm-listing/>）会看到一个人看的页面：
+每个包的名称、最新版本、说明、全部版本下载链接和源码仓库，以及该填进 Add Repository 的地址。
+页面和 `index.json` 都是 GitHub Actions 每次跟进插件仓库的新版本后自动重新生成的。
+
+## 索引怎么更新
+
+`scripts/make_vpm_repo.py` 把两个插件仓库的 Release 合并成一份索引，工作流每 15 分钟跟一次；
+发版后想立刻刷新，就在 Actions 页面手动跑一次 `重建 VPM 索引`（或往本仓库 push 一次）。
+
 ## 许可
 
 MIT。
