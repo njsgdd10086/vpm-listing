@@ -13,6 +13,12 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 | `com.nontoon.switcher` | LilToNonToon Switcher —— 右键把 lilToon 材质一键转成 NonToon，并生成一键切换开关 | [LilToNonToonSwitcher](https://github.com/njsgdd10086/LilToNonToonSwitcher) |
 | `com.atrinaxu.nontoon.lightlimit` | NonToon Light Limit —— NonToon 的亮度上下限 / 亮度倍数 / 全局控制，附一键生成全局亮度动画 + 菜单 | [NonToonLightLimit](https://github.com/njsgdd10086/NonToonLightLimit) |
 
+## 最近更新
+
+- **LilToNonToon Switcher 1.1.4**（2026-09-17）：lilToon 透明遮罩（`_AlphaMask`）改 alpha 的效果现在会烘进基础贴图
+  （半透明轻纱不再变实心）；描边宽度按对象缩放折算，并新增「描边宽度倍数」手动系数。
+- **NonToon Light Limit 1.1.8**：亮度模块的生效范围改成显式开关，修掉共享遮罩把亮度整个挡掉的问题。
+
 ## 怎么用
 
 1. VCC / ALCOM → **Settings → Packages → Add Repository**；
