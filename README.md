@@ -17,7 +17,9 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 - **LilToNonToon Switcher 1.1.4**（2026-09-17）：lilToon 透明遮罩（`_AlphaMask`）改 alpha 的效果现在会烘进基础贴图
   （半透明轻纱不再变实心）；描边宽度按对象缩放折算，并新增「描边宽度倍数」手动系数。
-- **NonToon Light Limit 1.1.8**：亮度模块的生效范围改成显式开关，修掉共享遮罩把亮度整个挡掉的问题。
+- **NonToon Light Limit 1.1.8**（2026-09-16）：亮度模块的生效范围改成显式开关，修掉共享遮罩把亮度整个挡掉的问题。
+
+浏览器打开 <https://njsgdd10086.github.io/vpm-listing/> 可以看每个包的版本、下载链接和源码仓库。
 
 ## 怎么用
 
