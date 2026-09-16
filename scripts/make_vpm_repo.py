@@ -55,16 +55,20 @@ def version_key(version: str) -> tuple:
     return numbers, suffix == ""
 
 
-def build_page(vpm: dict, author_url: str) -> str:
+def build_page(vpm: dict, author_url: str, published: dict | None = None) -> str:
     """生成给人看的页面：用浏览器打开索引地址时不再是看不懂的 JSON。"""
+    published = published or {}
+
+    def version_link(v: dict) -> str:
+        date = (published.get(v["version"]) or "")[:10]
+        label = html.escape(v["version"]) + (f"（{date}）" if date else "")
+        return f'<li><a href="{html.escape(v["url"])}">{label}</a></li>'
+
     cards = []
     for pkg_name, pkg in vpm["packages"].items():
         versions = list(pkg["versions"].values())
         latest = versions[0]
-        items = "".join(
-            f'<li><a href="{html.escape(v["url"])}">{html.escape(v["version"])}</a></li>'
-            for v in versions
-        )
+        items = "".join(version_link(v) for v in versions)
         cards.append(
             f'    <section class="card">\n'
             f'      <h2>{html.escape(latest["displayName"])}</h2>\n'
@@ -133,6 +137,7 @@ def main() -> int:
     login, repo_name = args.repository.split("/", 1)
 
     packages: dict[str, dict] = {}
+    published: dict[str, str] = {}
     for path in args.releases:
         # utf-8-sig 兼容带 BOM 的 JSON（例如用 PowerShell 写出来的文件）
         releases = json.loads(pathlib.Path(path).read_text(encoding="utf-8-sig"))
@@ -168,6 +173,10 @@ def main() -> int:
                 digest = asset.get("digest") or ""
                 if digest.startswith("sha256:"):
                     entry["zipSHA256"] = digest[len("sha256:"):]
+                # 只给网页用（不写进 index.json，避免多出未知字段）：这个版本的发布时间
+                stamp = release.get("published_at") or asset.get("created_at") or ""
+                if stamp:
+                    published.setdefault(version, stamp)
                 packages.setdefault(pkg_name, {"versions": {}})["versions"][version] = entry
 
     # 版本从新到旧排，VCC / ALCOM 里看起来更顺
@@ -191,7 +200,7 @@ def main() -> int:
     (output / "index.json").write_text(text, encoding="utf-8")
     (output / "vpm.json").write_text(text, encoding="utf-8")
     # 浏览器直接打开索引地址时给一个人看的页面
-    (output / "index.html").write_text(build_page(vpm, f"https://github.com/{login}"), encoding="utf-8")
+    (output / "index.html").write_text(build_page(vpm, f"https://github.com/{login}", published), encoding="utf-8")
 
     total = sum(len(pkg["versions"]) for pkg in ordered.values())
     print(f"已生成索引：包 {len(ordered)} 个，版本 {total} 个")
