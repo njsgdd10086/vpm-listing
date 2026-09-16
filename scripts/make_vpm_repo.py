@@ -205,7 +205,9 @@ def main() -> int:
     total = sum(len(pkg["versions"]) for pkg in ordered.values())
     print(f"已生成索引：包 {len(ordered)} 个，版本 {total} 个")
     for pkg_name, pkg in ordered.items():
-        print(f"  {pkg_name}: {', '.join(pkg['versions'])}")
+        versions = list(pkg["versions"])
+        stamp = (published.get(versions[0]) or "")[:10]
+        print(f"  {pkg_name}: {', '.join(versions)}" + (f"（最新 {versions[0]}，{stamp}）" if stamp else ""))
     return 0
 
 
