@@ -77,11 +77,18 @@ jobs:
           data = json.loads(pathlib.Path("pages/index.json").read_text(encoding="utf-8"))
           packages = data.get("packages") or {}
           assert packages, "索引里一个包都没有"
+          # VCC 的仓库模型：仓库级 author 是字符串、版本级 author 是对象，写反了 VCC 会直接拒绝加载（ALCOM 宽松所以看不出来）
+          assert isinstance(data.get("author"), str), "仓库级 author 必须是字符串"
           for name, pkg in packages.items():
               versions = pkg.get("versions") or {}
               assert versions, f"{name} 没有任何版本"
               for version, entry in versions.items():
                   assert entry.get("url"), f"{name} {version} 没有下载地址"
+                  assert entry.get("name") == name, f"{name} {version} 的 name 字段对不上"
+                  assert entry.get("version") == version, f"{name} {version} 的 version 字段对不上"
+                  assert entry.get("unity"), f"{name} {version} 没有 unity 版本"
+                  assert isinstance(entry.get("author"), dict), f"{name} {version} 的 author 必须是对象"
+                  assert isinstance(entry.get("keywords"), list), f"{name} {version} 没有 keywords 列表"
           print("索引自检通过：", {n: list(p["versions"]) for n, p in packages.items()})
 
           page = pathlib.Path("pages/index.html").read_text(encoding="utf-8")

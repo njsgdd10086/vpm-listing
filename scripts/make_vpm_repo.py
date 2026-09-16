@@ -28,11 +28,15 @@ PACKAGE_INFO = {
         "displayName": "LilToNonToon Switcher",
         "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），"
                        "并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+        "keywords": ["liltoon", "nontoon", "shader", "modular-avatar", "vrchat"],
+        "license": "MIT",
     },
     "com.atrinaxu.nontoon.lightlimit": {
         "displayName": "NonToon Light Limit",
         "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，"
                        "做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+        "keywords": ["nontoon", "shader", "light-limit", "vrchat"],
+        "license": "MIT",
     },
 }
 DEFAULT_UNITY = "2022.3"
@@ -50,7 +54,7 @@ def version_key(version: str) -> tuple:
     return numbers, suffix == ""
 
 
-def build_page(vpm: dict) -> str:
+def build_page(vpm: dict, author_url: str) -> str:
     """生成给人看的页面：用浏览器打开索引地址时不再是看不懂的 JSON。"""
     cards = []
     for pkg_name, pkg in vpm["packages"].items():
@@ -100,7 +104,7 @@ def build_page(vpm: dict) -> str:
 <body>
   <h1>{html.escape(vpm["name"])}</h1>
   <p class="meta">{len(vpm["packages"])} 个包 · {total} 个版本 · 作者
-    <a href="{html.escape(vpm["author"]["url"])}">{html.escape(vpm["author"]["name"])}</a></p>
+    <a href="{html.escape(author_url)}">{html.escape(vpm["author"])}</a></p>
 
   <p>在 VCC / ALCOM 里「Add Repository」填下面这个地址，就能看到并安装这里的插件：</p>
   <pre>{html.escape(index_url)}</pre>
@@ -142,7 +146,7 @@ def main() -> int:
                 pkg_name = match.group("name")
                 version = match.group("version")
                 info = PACKAGE_INFO.get(pkg_name, {})
-                packages.setdefault(pkg_name, {"versions": {}})["versions"][version] = {
+                entry = {
                     "name": pkg_name,
                     "displayName": info.get("displayName", pkg_name),
                     "version": version,
@@ -150,8 +154,17 @@ def main() -> int:
                     "description": info.get("description", ""),
                     "url": asset["browser_download_url"],
                     "repo": f"https://github.com/{slug}",
+                    "changelogUrl": f"https://github.com/{slug}/releases",
+                    "license": info.get("license", "MIT"),
+                    "keywords": info.get("keywords", []),
+                    # 版本级的 author 是对象（VCC 的包模型就是这么定义的），跟仓库级的字符串不一样
                     "author": {"name": AUTHOR_NAME, "url": f"https://github.com/{login}"},
                 }
+                # GitHub 给了 zip 的 sha256 就带上（VCC 会用它校验下载的包）
+                digest = asset.get("digest") or ""
+                if digest.startswith("sha256:"):
+                    entry["zipSHA256"] = digest[len("sha256:"):]
+                packages.setdefault(pkg_name, {"versions": {}})["versions"][version] = entry
 
     # 版本从新到旧排，VCC / ALCOM 里看起来更顺
     ordered = {name: {"versions": dict(sorted(pkg["versions"].items(), key=lambda kv: version_key(kv[0]), reverse=True))}
@@ -161,7 +174,9 @@ def main() -> int:
         "name": REPO_NAME,
         "id": f"com.{login}.vpm-repo",
         "url": f"https://{login}.github.io/{repo_name}/index.json",
-        "author": {"name": AUTHOR_NAME, "url": f"https://github.com/{login}"},
+        # VCC 的仓库模型里 author 是**字符串**（写成对象会让 VCC 直接报「不是有效的仓库列表」，
+        # ALCOM 因为是宽松解析所以看不出来），版本级的 author 才是对象。
+        "author": AUTHOR_NAME,
         "packages": ordered,
     }
 
@@ -172,7 +187,7 @@ def main() -> int:
     (output / "index.json").write_text(text, encoding="utf-8")
     (output / "vpm.json").write_text(text, encoding="utf-8")
     # 浏览器直接打开索引地址时给一个人看的页面
-    (output / "index.html").write_text(build_page(vpm), encoding="utf-8")
+    (output / "index.html").write_text(build_page(vpm, f"https://github.com/{login}"), encoding="utf-8")
 
     total = sum(len(pkg["versions"]) for pkg in ordered.values())
     print(f"已生成索引：包 {len(ordered)} 个，版本 {total} 个")
