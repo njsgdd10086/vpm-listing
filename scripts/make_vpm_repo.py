@@ -113,8 +113,10 @@ def build_page(vpm: dict, author_url: str) -> str:
 
 {chr(10).join(cards)}
 
-  <p class="meta">本页与 <a href="index.json">index.json</a> 由 GitHub Actions 每次跟进插件仓库的
-    Release 后自动重新生成 · 生成时间 {html.escape(generated)}</p>
+  <p class="meta">本页与 <a href="index.json">index.json</a> 由 GitHub Actions 在每次跟进插件仓库的
+    Release 后自动重新生成。发版后没立刻看到新版本的话，可以在本仓库的 Actions 页面手动跑一次
+    「重建 VPM 索引」（定时任务有时会被 GitHub 延后）。<br>
+    生成时间 {html.escape(generated)}</p>
 </body>
 </html>
 """
