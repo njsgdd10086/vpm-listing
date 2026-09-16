@@ -179,8 +179,18 @@ def main() -> int:
                     published.setdefault(version, stamp)
                 packages.setdefault(pkg_name, {"versions": {}})["versions"][version] = entry
 
-    # 版本从新到旧排，VCC / ALCOM 里看起来更顺
-    ordered = {name: {"versions": dict(sorted(pkg["versions"].items(), key=lambda kv: version_key(kv[0]), reverse=True))}
+    # 同一版本号在多个 release 里出现时，发布时间取最新的那次（重发 / 修资产的情况）
+    for pkg in packages.values():
+        for version in pkg["versions"]:
+            stamps = [published.get(version)] if published.get(version) else []
+            if stamps and max(stamps) != published.get(version):
+                published[version] = max(stamps)
+
+    # 版本从新到旧排：先按发布时间，缺失的再按版本号，VCC / ALCOM 里看起来更顺
+    def order_key(version: str):
+        return (published.get(version) or "", version_key(version))
+
+    ordered = {name: {"versions": dict(sorted(pkg["versions"].items(), key=lambda kv: order_key(kv[0]), reverse=True))}
                for name, pkg in sorted(packages.items())}
 
     vpm = {

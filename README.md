@@ -15,13 +15,15 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 ## 最近更新
 
-- **LilToNonToon Switcher 1.1.5**（2026-09-17）：阴影渐变改成按 lilToon 的过渡窗口采样（`[border ± blur/2]`，阴影色 alpha 当强度），
-  修掉脸上硬边 + 阶梯状的明暗分界。
+- **LilToNonToon Switcher 1.1.7**（2026-09-17）：lilToon 的透明是**预乘 alpha**（`Blend One OneMinusSrcAlpha`），NonToon 不预乘 ——
+  照搬会把颜色原样叠上去，半透明的腮红/薄纱层就会变成实心块。现在自动做等价换算（源系数换成 `SrcAlpha`）。
+- **LilToNonToon Switcher 1.1.6**（2026-09-17）：渐变资产写文件时不再把关键点压回 4 个等距点（1.1.5 的阴影修复因此没生效），
+  并补上 `_ShadowStrength`。
 - **LilToNonToon Switcher 1.1.4**（2026-09-17）：lilToon 透明遮罩（`_AlphaMask`）改 alpha 的效果现在会烘进基础贴图
   （半透明轻纱不再变实心）；描边宽度按对象缩放折算，并新增「描边宽度倍数」手动系数。
 - **NonToon Light Limit 1.1.8**（2026-09-16）：亮度模块的生效范围改成显式开关，修掉共享遮罩把亮度整个挡掉的问题。
 
-浏览器打开 <https://njsgdd10086.github.io/vpm-listing/> 可以看每个包的版本、下载链接和源码仓库。
+浏览器打开 <https://njsgdd10086.github.io/vpm-listing/> 可以看每个包的版本、下载链接（带发布时间）和源码仓库。
 
 ## 怎么用
 
