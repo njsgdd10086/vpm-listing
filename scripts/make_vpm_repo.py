@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime
 import html
 import json
 import pathlib
@@ -77,6 +78,7 @@ def build_page(vpm: dict, author_url: str) -> str:
         )
     total = sum(len(pkg["versions"]) for pkg in vpm["packages"].values())
     index_url = vpm["url"]
+    generated = datetime.datetime.now(datetime.timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M %z")
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -112,7 +114,7 @@ def build_page(vpm: dict, author_url: str) -> str:
 {chr(10).join(cards)}
 
   <p class="meta">本页与 <a href="index.json">index.json</a> 由 GitHub Actions 每次跟进插件仓库的
-    Release 后自动重新生成。</p>
+    Release 后自动重新生成 · 生成时间 {html.escape(generated)}</p>
 </body>
 </html>
 """
