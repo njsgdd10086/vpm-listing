@@ -8,6 +8,9 @@ on:
     paths:
       - 'scripts/make_vpm_repo.py'
       - '.github/workflows/index.yml'
+      # README 里维护着「最近更新」，改它通常意味着"想刷新索引"，
+      # 之前只认上面两个文件，结果推 README 完全不会触发（踩过这个坑）。
+      - 'README.md'
   schedule:
     # 每 15 分钟跟一次插件仓库的新版本（发版后最迟一刻钟出现在索引里；
     # 想立刻刷新就在 Actions 页面手动跑一次本工作流）
