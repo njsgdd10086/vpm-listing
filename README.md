@@ -15,6 +15,7 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 ## 最近更新
 
+- **LilToNonToon Switcher 1.1.11**（2026-09-17）：源 shader 没有描边变体时不再照搬残留的 _OutlineWidth —— 之前透明/特效层会凭空多出一圈**不透明**描边壳，在 VR 里就像有东西挡住视野。
 - **LilToNonToon Switcher 1.1.10**（2026-09-17）：共享遮罩的多个遮罩不再挤在同一个通道上互相覆盖（烘焙时自动分配空闲通道）。
 - **LilToNonToon Switcher 1.1.9**（2026-09-17）：与另一个转换插件逐属性对拍后修掉 4 个问题 —— 阴影/边缘阴影渐变索引串位、
   `_UseReflection = 0` 时凭空多出的高光、没挂法线贴图时照搬的 `_BumpScale`、alpha 通道混合系数的误换算。
