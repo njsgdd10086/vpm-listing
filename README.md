@@ -15,6 +15,8 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 
 ## 最近更新
 
+- **LilToNonToon Switcher 1.1.14**（2026-09-17）：支持 **lilToon 的第二层 MatCap**（_MatCap2ndTex，羽毛/玫瑰这类装饰以前完全没转）；
+  修掉 Shader Core 模块开关「勾着但不生效」（要写 <属性名大写>_<值> 关键字）；_BumpMap 同时接 Details 法线；遮罩通道按实际槽位分配。
 - **LilToNonToon Switcher 1.1.13**（2026-09-17）：修掉「白金色服装的金饰变灰」（MatCap/金属质感整片失效）—— Shader Core 的模块开关要写**关键字**（不只是 _Enable）、lilToon 的 MatCap 混合模式 0 是 **Normal**（我们错当成 Multiply）、遮罩通道要跟实际使用的槽位一致。
 - **NonToon 亮度控制 1.1.9 / LilToNonToon Switcher 1.1.12**（2026-09-17）：两个插件都加了**版本号显示与更新检查** ——
   菜单「关于与更新检查…」显示当前版本与索引里的最新版本，窗口顶部也有版本号和按钮，编辑器启动后每天自动检查一次。
