@@ -26,6 +26,12 @@ AUTHOR_NAME = "ATRI_NAIXU"
 # 每个包在 VCC / ALCOM 里显示的信息
 PACKAGE_INFO = {
     "com.nontoon.switcher": {
+        # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
+        "vpmDependencies": {
+        "jp.lilxyzw.shadercore": "^0.1.5",
+        "jp.lilxyzw.nontoon": "^0.1.3",
+        "com.nontoon.modules": "^0.1.0",
+        },
         "displayName": "LilToNonToon Switcher",
         "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），"
                        "并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
@@ -33,6 +39,11 @@ PACKAGE_INFO = {
         "license": "MIT",
     },
     "com.nontoon.modules": {
+        # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
+        "vpmDependencies": {
+        "jp.lilxyzw.shadercore": "^0.1.5",
+        "jp.lilxyzw.nontoon": "^0.1.3",
+        },
         "displayName": "NonToon Modules",
         "description": "NonToon 的扩展模块集合（Shader Core 模块）：织物/法线细节（布料质感）、"
                        "亮度上下限与亮度倍数。可以在 Tools/NonToon 模块 里逐项勾选；"
@@ -41,6 +52,12 @@ PACKAGE_INFO = {
         "license": "MIT",
     },
     "com.atrinaxu.nontoon.lightlimit": {
+        # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
+        "vpmDependencies": {
+        "jp.lilxyzw.shadercore": "^0.1.5",
+        "jp.lilxyzw.nontoon": "^0.1.3",
+        "com.nontoon.modules": "^0.1.0",
+        },
         "displayName": "NonToon Light Limit",
         "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，"
                        "做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
@@ -174,6 +191,8 @@ def main() -> int:
                     "changelogUrl": f"https://github.com/{slug}/releases",
                     "license": info.get("license", "MIT"),
                     "keywords": info.get("keywords", []),
+                    # 依赖解析读的就是这个字段（VCC / ALCOM 都认它），缺了它就不会自动带上依赖
+                    "vpmDependencies": info.get("vpmDependencies", {}),
                     # 版本级的 author 是对象（VCC 的包模型就是这么定义的），跟仓库级的字符串不一样
                     "author": {"name": AUTHOR_NAME, "url": f"https://github.com/{login}"},
                 }
