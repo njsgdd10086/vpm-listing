@@ -27,7 +27,7 @@ concurrency:
 
 env:
   # 索引里要列出的所有包所在仓库
-  PACKAGE_REPOS: 'njsgdd10086/LilToNonToonSwitcher njsgdd10086/NonToonLightLimit'
+  PACKAGE_REPOS: 'njsgdd10086/LilToNonToonSwitcher njsgdd10086/NonToonLightLimit njsgdd10086/NonToonModules'
 
 jobs:
   vpm-repo:

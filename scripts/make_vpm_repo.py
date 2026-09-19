@@ -32,6 +32,14 @@ PACKAGE_INFO = {
         "keywords": ["liltoon", "nontoon", "shader", "modular-avatar", "vrchat"],
         "license": "MIT",
     },
+    "com.nontoon.modules": {
+        "displayName": "NonToon Modules",
+        "description": "NonToon 的扩展模块集合（Shader Core 模块）：织物/法线细节（布料质感）、"
+                       "亮度上下限与亮度倍数。可以在 Tools/NonToon 模块 里逐项勾选；"
+                       "装了下面对应的插件时会自动勾选所需模块。",
+        "keywords": ["nontoon", "shader", "module", "fabric", "light-limit", "vrchat"],
+        "license": "MIT",
+    },
     "com.atrinaxu.nontoon.lightlimit": {
         "displayName": "NonToon Light Limit",
         "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，"
