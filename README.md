@@ -56,3 +56,13 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 ## 许可
 
 MIT。
+
+## 这份索引包含的包
+
+| 包名 | 说明 |
+| --- | --- |
+| **com.nontoon.modules** | NonToon 的扩展模块集合（Shader Core 模块）：织物/法线细节、亮度上下限。可在 Tools/NonToon 模块 里逐项勾选，也能单独使用。 |
+| **com.nontoon.switcher** | LilToNonToon Switcher —— lilToon 材质一键转 NonToon。依赖上面的模块包。 |
+| **com.atrinaxu.nontoon.lightlimit** | NonToon 亮度控制 —— 亮度上下限与亮度倍数、全局亮度动画工具。依赖上面的模块包。 |
+
+两个插件都通过 VPM 依赖自动带上 **com.nontoon.modules**，也会在使用时自动勾选所需模块。
