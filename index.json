@@ -1,0 +1,904 @@
+{
+  "name": "ATRI_NAIXU VPM Packages",
+  "id": "com.njsgdd10086.vpm-repo",
+  "url": "https://njsgdd10086.github.io/vpm-listing/index.json",
+  "author": "ATRI_NAIXU",
+  "packages": {
+    "com.atrinaxu.nontoon.lightlimit": {
+      "versions": {
+        "1.2.0": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.2.0",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.2.0/com.atrinaxu.nontoon.lightlimit-1.2.0.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "27eb0a49ea76202984a5ef0683f248bf6efc2a3135d877bdfad20eeaef19eaaa"
+        },
+        "1.1.9": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.9",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.9/com.atrinaxu.nontoon.lightlimit-1.1.9.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "4a1ede0842c238aef3c75af680674c401141442e9fed7454253ad0088d3eb0a5"
+        },
+        "1.1.8": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.8",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.8/com.atrinaxu.nontoon.lightlimit-1.1.8.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "73de8f00cf21b2a60ca00976d1792906dd8e7e8d801674d416c0d33442759b0a"
+        },
+        "1.1.7": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.7",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.7/com.atrinaxu.nontoon.lightlimit-1.1.7.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "6ad10519691e33ead11a6532c363a313e228eb21652b66418c6b24b7a5c376de"
+        },
+        "1.1.6": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.6",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.6/com.atrinaxu.nontoon.lightlimit-1.1.6.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "c46b8fb902926eddfcd03a31a942d307703875f63f35642d6faa87b06efcf879"
+        },
+        "1.1.5": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.5",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.5/com.atrinaxu.nontoon.lightlimit-1.1.5.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "a1e9b4a56b38504c772dcbeae49c2d850046cb583b12cbc5d8676c14d06a98e3"
+        },
+        "1.1.4": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.4",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.4/com.atrinaxu.nontoon.lightlimit-1.1.4.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "911b55990eebb09df6e6257f5ebd836966be7025827488260de81e6d644e4adf"
+        },
+        "1.1.3": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.3",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.3/com.atrinaxu.nontoon.lightlimit-1.1.3.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "933f6ea746b8dfc63e4f78248986a9d39cc2fafb0c998aacf20d8355afde4d19"
+        },
+        "1.1.2": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.2",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.2/com.atrinaxu.nontoon.lightlimit-1.1.2.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "487b485a3e153150cac0b098a374820552c95aebf0e0d47c62debcc63321a77c"
+        },
+        "1.1.1": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.1",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.1/com.atrinaxu.nontoon.lightlimit-1.1.1.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "d177547977837d22d3ee83fc8bab472e547bc3fde98ce0cf8448d953ae716746"
+        },
+        "1.1.0": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.1.0",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.1.0/com.atrinaxu.nontoon.lightlimit-1.1.0.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "429c0131fca6a4ab7a65a3bb926d087cc5e8b40e1ad660a710c65d8130d75cb1"
+        },
+        "1.0.0": {
+          "name": "com.atrinaxu.nontoon.lightlimit",
+          "displayName": "NonToon Light Limit",
+          "version": "1.0.0",
+          "unity": "2022.3",
+          "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，做 Light Limit Changer 式的亮度调节；另附一键生成全局亮度动画 + 表情菜单滑块的小工具。",
+          "url": "https://github.com/njsgdd10086/NonToonLightLimit/releases/download/v1.0.0/com.atrinaxu.nontoon.lightlimit-1.0.0.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonLightLimit",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonLightLimit/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "710bdeb64a67bada15df6568f5b7b587c163851997736e35fd16eeb0cf6ad639"
+        }
+      }
+    },
+    "com.nontoon.modules": {
+      "versions": {
+        "0.1.0": {
+          "name": "com.nontoon.modules",
+          "displayName": "NonToon Modules",
+          "version": "0.1.0",
+          "unity": "2022.3",
+          "description": "NonToon 的扩展模块集合（Shader Core 模块）：织物/法线细节（布料质感）、亮度上下限与亮度倍数。可以在 Tools/NonToon 模块 里逐项勾选；装了下面对应的插件时会自动勾选所需模块。",
+          "url": "https://github.com/njsgdd10086/NonToonModules/releases/download/v0.1.0/com.nontoon.modules-0.1.0.zip",
+          "repo": "https://github.com/njsgdd10086/NonToonModules",
+          "changelogUrl": "https://github.com/njsgdd10086/NonToonModules/releases",
+          "license": "MIT",
+          "keywords": [
+            "nontoon",
+            "shader",
+            "module",
+            "fabric",
+            "light-limit",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "21d625b51edb27de74a2ae5c4a2ea4a9cf9565a53a3f81ecb69159763fdd0dad"
+        }
+      }
+    },
+    "com.nontoon.switcher": {
+      "versions": {
+        "1.1.15": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.15",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.15/com.nontoon.switcher-1.1.15.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "cc01839f3d4b03d6f43aa5d2e29b3cc6fa4f0b69316f2cade9bc636eae9c20b4"
+        },
+        "1.1.14": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.14",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.14/com.nontoon.switcher-1.1.14.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "8487dc8403c056cc2dc30949e94a61956274d8b83af72e069e8f8d9470decbfb"
+        },
+        "1.1.13": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.13",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.13/com.nontoon.switcher-1.1.13.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "7d9f79a9b3d0d2e0ce789cbadb90d561f465fe52930083c02a013cebb0c293f6"
+        },
+        "1.1.12": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.12",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.12/com.nontoon.switcher-1.1.12.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "24ad9c3c681ce91255d5e11c8ff050d9025ecc2d15950a1a0967f67150814a69"
+        },
+        "1.1.11": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.11",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.11/com.nontoon.switcher-1.1.11.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "90a3bab7da04db01e1984a7f1f7837744f45a15b1154b452ae0e28cea2227288"
+        },
+        "1.1.10": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.10",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.10/com.nontoon.switcher-1.1.10.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "5e64482791a87c1a45cd47d124b6ec763d216563a6220b24f1db561f2b843298"
+        },
+        "1.1.9": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.9",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.9/com.nontoon.switcher-1.1.9.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "2b6f553dfaaa799d56e1154ebb660080b124b5629a3154128ed5993764228669"
+        },
+        "1.1.8": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.8",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.8/com.nontoon.switcher-1.1.8.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "cafb18b27d07e0b8b8111561a3043147df56b22866f4de4f7186b5b3278bb692"
+        },
+        "1.1.7": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.7",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.7/com.nontoon.switcher-1.1.7.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "73ed964bdeb7433744c4816556e3cc6c6d83d1af4362b0bc72fd42a5cfcccb62"
+        },
+        "1.1.6": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.6",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.6/com.nontoon.switcher-1.1.6.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "566a2fc5943c611edd2fb23229c914d0a8d564b17dc305dab429bc6e50e97ea5"
+        },
+        "1.1.5": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.5",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.5/com.nontoon.switcher-1.1.5.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "b91f00364735cc93c69f2ae14f5f1946f69f8e1267a7d71d7dac300f95084051"
+        },
+        "1.1.4": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.4",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.4/com.nontoon.switcher-1.1.4.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "906cd82342a024e857d71fdb52810ad54260402b0dc4029426fad3c3a5f895e3"
+        },
+        "1.1.3": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.3",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.3/com.nontoon.switcher-1.1.3.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "fd59b0ff65cd27ec8f44d0702c6c92fef61cfb2ed0588a8053ea3c13b0b724b1"
+        },
+        "1.1.2": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.2",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.2/com.nontoon.switcher-1.1.2.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "2b1f7fb24141718198c7e2ea6a40a68a9e839b6773ac7ed049261f0c5cdd0f52"
+        },
+        "1.1.1": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.1",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.1/com.nontoon.switcher-1.1.1.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "a2cce5d9320d148beef3d61e92b1ab34c22fee67a30e86c8e85ac53a472fcd78"
+        },
+        "1.1.0": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.1.0",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.1.0/com.nontoon.switcher-1.1.0.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "2ba32bf39e2af80233580f367dc3e37112c9c6d531b18faa289ee54834cdf025"
+        },
+        "1.0.3": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.0.3",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.0.3/com.nontoon.switcher-1.0.3.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "cf316c02f79d9c676127bb07e5b85639b3e3e570758d09c4747142748a843a69"
+        },
+        "1.0.2": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.0.2",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.0.2/com.nontoon.switcher-1.0.2.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "dfb1af3da413ba7ac8bea20e59b6eac0f20863d964fc9390560aac4b99535fb9"
+        },
+        "1.0.1": {
+          "name": "com.nontoon.switcher",
+          "displayName": "LilToNonToon Switcher",
+          "version": "1.0.1",
+          "unity": "2022.3",
+          "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），并自动生成 Modular Avatar 的 MA Material Setter + 菜单开关。",
+          "url": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases/download/v1.0.1/com.nontoon.switcher-1.0.1.zip",
+          "repo": "https://github.com/njsgdd10086/LilToNonToonSwitcher",
+          "changelogUrl": "https://github.com/njsgdd10086/LilToNonToonSwitcher/releases",
+          "license": "MIT",
+          "keywords": [
+            "liltoon",
+            "nontoon",
+            "shader",
+            "modular-avatar",
+            "vrchat"
+          ],
+          "vpmDependencies": {
+            "jp.lilxyzw.shadercore": "^0.1.5",
+            "jp.lilxyzw.nontoon": "^0.1.3",
+            "com.nontoon.modules": "^0.1.0"
+          },
+          "author": {
+            "name": "ATRI_NAIXU",
+            "url": "https://github.com/njsgdd10086"
+          },
+          "zipSHA256": "605ea7e416bb260e9d8b68a9249ba834c6257cb3a55bcb06c8ff20de1fb1a9d1"
+        }
+      }
+    }
+  }
+}
