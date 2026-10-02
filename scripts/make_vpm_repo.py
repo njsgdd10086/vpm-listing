@@ -28,9 +28,9 @@ PACKAGE_INFO = {
     "com.nontoon.switcher": {
         # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
         "vpmDependencies": {
-        "jp.lilxyzw.shadercore": "^0.1.5",
-        "jp.lilxyzw.nontoon": "^0.1.3",
-        "com.nontoon.modules": "^0.1.0",
+        "jp.lilxyzw.shadercore": ">=0.1.5",
+        "jp.lilxyzw.nontoon": ">=0.1.3",
+        "com.nontoon.modules": ">=0.1.0",
         },
         "displayName": "LilToNonToon Switcher",
         "description": "右键把 lilToon 材质一键转换为 NonToon（输出 <名称>_nontoon.mat），"
@@ -41,8 +41,8 @@ PACKAGE_INFO = {
     "com.nontoon.modules": {
         # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
         "vpmDependencies": {
-        "jp.lilxyzw.shadercore": "^0.1.5",
-        "jp.lilxyzw.nontoon": "^0.1.3",
+        "jp.lilxyzw.shadercore": ">=0.1.5",
+        "jp.lilxyzw.nontoon": ">=0.1.3",
         },
         "displayName": "NonToon Modules",
         "description": "NonToon 的扩展模块集合（Shader Core 模块）：织物/法线细节（布料质感）、"
@@ -54,9 +54,9 @@ PACKAGE_INFO = {
     "com.atrinaxu.nontoon.lightlimit": {
         # 与各仓库 package.json 里的 vpmDependencies 保持一致（改依赖时这里也要改）
         "vpmDependencies": {
-        "jp.lilxyzw.shadercore": "^0.1.5",
-        "jp.lilxyzw.nontoon": "^0.1.3",
-        "com.nontoon.modules": "^0.1.0",
+        "jp.lilxyzw.shadercore": ">=0.1.5",
+        "jp.lilxyzw.nontoon": ">=0.1.3",
+        "com.nontoon.modules": ">=0.1.0",
         },
         "displayName": "NonToon Light Limit",
         "description": "给 NonToon 加上亮度上下限与亮度倍数，并支持全局统一控制，"
