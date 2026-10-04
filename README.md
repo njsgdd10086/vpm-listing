@@ -13,6 +13,10 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 | `com.nontoon.switcher` | LilToNonToon Switcher —— 右键把 lilToon 材质一键转成 NonToon，并生成一键切换开关 | [LilToNonToonSwitcher](https://github.com/njsgdd10086/LilToNonToonSwitcher) |
 | `com.atrinaxu.nontoon.lightlimit` | NonToon Light Limit —— NonToon 的亮度上下限 / 亮度倍数 / 全局控制，附一键生成全局亮度动画 + 菜单 | [NonToonLightLimit](https://github.com/njsgdd10086/NonToonLightLimit) |
 
+> 当前版本：**com.nontoon.switcher 1.2.0**（自发光/眼睛高光完全重做、渲染器阴影开关诊断、高级设置默认全 1）、**com.nontoon.modules 0.2.0**、**com.atrinaxu.nontoon.lightlimit 1.2.1**。
+> 索引由 Actions 每 15 分钟自动重建；发版后最迟一刻钟出现在 VCC / ALCOM 里。
+
+
 ## 最近更新
 
 - **LilToNonToon Switcher 1.1.14**（2026-09-17）：支持 **lilToon 的第二层 MatCap**（_MatCap2ndTex，羽毛/玫瑰这类装饰以前完全没转）；
