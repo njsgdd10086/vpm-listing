@@ -70,3 +70,5 @@ MIT。
 | **com.atrinaxu.nontoon.lightlimit** | NonToon 亮度控制 —— 亮度上下限与亮度倍数、全局亮度动画工具。依赖上面的模块包。 |
 
 两个插件都通过 VPM 依赖自动带上 **com.nontoon.modules**，也会在使用时自动勾选所需模块。
+
+<!-- 刷新: 2026-10-04 19:42 -->
