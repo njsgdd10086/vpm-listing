@@ -13,12 +13,17 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 | `com.nontoon.switcher` | LilToNonToon Switcher —— 右键把 lilToon 材质一键转成 NonToon，并生成一键切换开关 | [LilToNonToonSwitcher](https://github.com/njsgdd10086/LilToNonToonSwitcher) |
 | `com.atrinaxu.nontoon.lightlimit` | NonToon Light Limit —— NonToon 的亮度上下限 / 亮度倍数 / 全局控制，附一键生成全局亮度动画 + 菜单 | [NonToonLightLimit](https://github.com/njsgdd10086/NonToonLightLimit) |
 
-> 当前版本：**com.nontoon.switcher 1.2.0**（自发光/眼睛高光完全重做、渲染器阴影开关诊断、高级设置默认全 1）、**com.nontoon.modules 0.2.0**、**com.atrinaxu.nontoon.lightlimit 1.2.1**。
+> 当前版本：**com.nontoon.switcher 1.4.1**（转换前体检：渲染队列 / 接受阴影问题在转换动手前就醒目报出）、**com.nontoon.modules 0.3.0**、**com.atrinaxu.nontoon.lightlimit 1.2.1**。
 > 索引由 Actions 每 15 分钟自动重建；发版后最迟一刻钟出现在 VCC / ALCOM 里。
 
 
 ## 最近更新
 
+- **LilToNonToon Switcher 1.4.1**（2026-11-01）：新增**转换前体检** —— 点下转换后、动手之前先只读扫描，
+  把「改材质也救不回来」的问题连同具体对象 / 材质名报出来（Console 醒目色块 + 弹窗，批处理不弹）：
+  ① 渲染器 `Mesh Renderer → 照明 → 接受阴影` 没勾；② 材质渲染队列落在 Unity 透明通道（> 2500，
+  BIRP 透明通道收不到阴影 ⇒ 阴影里保持满亮度，典型症状是"整身都暗、只有某件衣服不暗"）。
+  渲染队列仍**忠实照搬**源材质，越界情况由体检提示后手动改到 ≤2500。
 - **LilToNonToon Switcher 1.1.14**（2026-09-17）：支持 **lilToon 的第二层 MatCap**（_MatCap2ndTex，羽毛/玫瑰这类装饰以前完全没转）；
   修掉 Shader Core 模块开关「勾着但不生效」（要写 <属性名大写>_<值> 关键字）；_BumpMap 同时接 Details 法线；遮罩通道按实际槽位分配。
 - **LilToNonToon Switcher 1.1.13**（2026-09-17）：修掉「白金色服装的金饰变灰」（MatCap/金属质感整片失效）—— Shader Core 的模块开关要写**关键字**（不只是 _Enable）、lilToon 的 MatCap 混合模式 0 是 **Normal**（我们错当成 Multiply）、遮罩通道要跟实际使用的槽位一致。
@@ -71,4 +76,4 @@ MIT。
 
 两个插件都通过 VPM 依赖自动带上 **com.nontoon.modules**，也会在使用时自动勾选所需模块。
 
-<!-- 刷新: 2026-10-28 18:43 -->
+<!-- 刷新: 2026-11-01 15:27 -->
