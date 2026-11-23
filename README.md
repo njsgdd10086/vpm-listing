@@ -13,12 +13,18 @@ https://njsgdd10086.github.io/vpm-listing/index.json
 | `com.nontoon.switcher` | LilToNonToon Switcher —— 右键把 lilToon 材质一键转成 NonToon，并生成一键切换开关 | [LilToNonToonSwitcher](https://github.com/njsgdd10086/LilToNonToonSwitcher) |
 | `com.atrinaxu.nontoon.lightlimit` | NonToon Light Limit —— NonToon 的亮度上下限 / 亮度倍数 / 全局控制，附一键生成全局亮度动画 + 菜单 | [NonToonLightLimit](https://github.com/njsgdd10086/NonToonLightLimit) |
 
-> 当前版本：**com.nontoon.switcher 1.4.2**（真实肤质「鳄鱼皮」修复 + 多层主色一键烘焙/恢复 + 转换前警告可停止）、**com.nontoon.modules 0.3.0**、**com.atrinaxu.nontoon.lightlimit 1.2.1**。
+> 当前版本：**com.nontoon.switcher 1.4.3**（蕾丝花纹消失修复 + 关阴影材质发白修复 + 贴图分辨率忠实化）、**com.nontoon.modules 0.3.0**、**com.atrinaxu.nontoon.lightlimit 1.2.1**。
 > 索引由 Actions 每 15 分钟自动重建；发版后最迟一刻钟出现在 VCC / ALCOM 里。
 
 
 ## 最近更新
 
+- **LilToNonToon Switcher 1.4.3**（2026-11-23）：修掉两个「转换后才出现」的观感问题 ——
+  ① **蕾丝 / 印花花纹整片消失**：NonToon 的主 `_BaseTexture` 不乘 `_BaseTexture_ST`，源材质 1.7× 平铺 + 偏移
+  会被按 1× 采样，采到完全不同的区域；现在把 UV 变换重采样烘进 `<材质名>_BaseUV.png` 并把 ST 归零（采样等价）。
+  ② **关阴影（`_UseShadow = 0`）的材质一打光就发白**：这类材质以前不烘色带，`_SharedGradients` 为 null 时
+  NonToon 用默认「白→白」渐变、完全不响应光照；现在补一条黑→白线性坡度。同时**贴图分辨率严格忠实**：
+  UV 变换与基础贴图烘焙都不再缩放，并继承 `npotScale`。
 - **LilToNonToon Switcher 1.4.2**（2026-11-08）：修掉「真实肤质」皮肤的**鳄鱼皮纹理** —— NonToon 的主 `_NormalMap`
   不乘 `_NormalMap_ST`，源材质 80× 平铺的细密皮肤法线会被按 1× 采样、放大成鳞片；现在这类材质把主法线强度置 0，
   细节交给支持平铺的 Details 模块。新增 **多层主色（2/3）一键烘焙 + 一键恢复**（用 lilToon 自己的烘焙内核，
@@ -80,4 +86,4 @@ MIT。
 
 两个插件都通过 VPM 依赖自动带上 **com.nontoon.modules**，也会在使用时自动勾选所需模块。
 
-<!-- 刷新: 2026-11-08 17:20 -->
+<!-- 刷新: 2026-11-23 22:20 -->
